@@ -1,0 +1,29 @@
+[project]
+name = 'arkadiko-dao'
+description = 'DeFi protocol inspired by MakerDAO implementing stablecoin $DIKO and governance token $ARE with over-collateralized STX tokens'
+authors = ['Arkadiko DAO Team']
+telemetry = true
+cache_dir = './.cache'
+requirements = []
+[contracts.arkadiko-oracle]
+path = 'contracts/arkadiko-oracle.clar'
+clarity_version = 3
+epoch = 3.1
+
+[contracts.arkadiko-token]
+path = 'contracts/arkadiko-token.clar'
+clarity_version = 3
+epoch = 3.1
+
+[contracts.arkadiko-vault]
+path = 'contracts/arkadiko-vault.clar'
+clarity_version = 3
+epoch = 3.1
+[repl.analysis]
+passes = ['check_checker']
+
+[repl.analysis.check_checker]
+strict = false
+trusted_sender = false
+trusted_caller = false
+callee_filter = false
